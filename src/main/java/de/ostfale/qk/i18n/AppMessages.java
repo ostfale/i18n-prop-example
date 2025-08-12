@@ -8,6 +8,7 @@ import io.quarkus.qute.i18n.MessageBundle;
  * resource files under src/main/resources/messages/.
  */
 
+
 @MessageBundle("AppMessages")
 public interface AppMessages {
     @Message("Welcome!")

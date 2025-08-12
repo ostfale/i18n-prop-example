@@ -29,10 +29,12 @@ public class DatabaseMessageSource {
         return getMessage(key, requestLocale.get(), args);
     }
 
-
+    /**
+     * Fetches a localized message for a specific locale, with fallback to the default.
+     */
     public String getMessage(String key, Locale locale, Object... args) {
 
-        LOG.info("Fetching message for key: " + key + ", locale: " + locale);
+        LOG.info("Fetching message for key: " + key + ", locale: " + locale + " DefaultLocale: "+  defaultLocaleStr);
 
         Locale fallbackLocale = Locale.forLanguageTag(defaultLocaleStr);
 
